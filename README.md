@@ -17,7 +17,7 @@
 ### 具体使用方法
 1. 安装依赖
    ```
-   pip install beautifulsoup4 tabulate requests
+   pip install beautifulsoup4 tabulate requests wcwidth
    ```
 3. 在`cjcx.py`中填写账号密码：
    ```python
