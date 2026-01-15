@@ -27,6 +27,9 @@
     }
    ```
 4. 运行相应的Python文件即可
+   ```
+   %path to python%\python.exe %path to file%/cjcx.py
+   ```
 
 ## 效果示例
 1. `cjcx.py`：只查询2025-2026第一学期的成绩  
