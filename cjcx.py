@@ -12,7 +12,7 @@ authen = {
 session = requests.Session()
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.31(0x18001f30) NetType/WIFI Language/zh_CN",
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_1_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.61(0x18003d39) NetType/WIFI Language/zh_CN",
     "Referer": "https://app.buaa.edu.cn/"
 }
 
@@ -65,4 +65,5 @@ if  __name__ == "__main__":
             table_data.append([course['kcmc'], course['xf'], course['kccj']])
     head = ["课程名称", "学分", "成绩"]
     print(tabulate(table_data, headers=head, tablefmt="fancy_grid"))
+
     print(f"本学期已修学分：{XFC}")
