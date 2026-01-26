@@ -5,14 +5,14 @@ from bs4 import BeautifulSoup
 from tabulate import tabulate
 
 authen = {
-    'username': '',
-    'password': '',
+    'username': 'SY2503517',
+    'password': 'Buaa1921028',
 }
 
 session = requests.Session()
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_1_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.61(0x18003d39) NetType/WIFI Language/zh_CN",
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_1_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.67.3000(0x2800433A) NetType/WIFI Language/zh_CN",
     "Referer": "https://app.buaa.edu.cn/"
 }
 
@@ -55,6 +55,9 @@ if match:
 else:
     print("未找到成绩数据列表。")
     exit()
+
+pa=r'gpa:\s*(\'.*?\')'
+gpa = ((re.search(pa, c.text, re.DOTALL)).group(1))[1:-1]
 
 if  __name__ == "__main__":
     XFC = 0
