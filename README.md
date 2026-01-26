@@ -33,9 +33,9 @@
 
 ## 效果示例
 1. `cjcx.py`：只查询2025-2026第一学期的成绩  
-![example01](pic/02.png)  
+![example01](pic/03.png)  
 1. `cjcx_choose.py`：选择查看  
-![example02](pic/01.png)
+![example02](pic/04.png)
 
 ## 原理
 由于`gsmis`中没有评教时候会直接显示未评教。估计是逻辑是后端屏蔽，因此本地无法获取。  
