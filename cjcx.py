@@ -62,8 +62,11 @@ if  __name__ == "__main__":
     for course in grade_list:
         if course['year'] == "2025-2026" and course['xq'] == "1":
             XFC = XFC + float(course['xf'])
-            table_data.append([course['kcmc'], course['xf'], course['kccj']])
-    head = ["课程名称", "学分", "成绩"]
+            if course['fslx'] == "百分制":
+                jd = 4 - 3 * (100 - float(course['kccj']))** 2 / 1600
+                table_data.append([course['kcmc'], course['xf'], course['kccj'], f"{jd:.2f}"])
+            else:
+                table_data.append([course['kcmc'], course['xf'], course['kccj']])
+    head = ["课程名称", "学分", "成绩", "绩点"]
     print(tabulate(table_data, headers=head, tablefmt="fancy_grid"))
-
     print(f"本学期已修学分：{XFC}")
